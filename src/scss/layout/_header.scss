@@ -1,0 +1,66 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-color: v.$grisOscuro;
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: url(../img/full/header.webp);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include m.tablet {
+            min-height: 70rem;
+        }
+
+        .contenido-header {
+            @include m.tablet {
+                min-height: 60rem;
+            }
+        }
+    }
+
+    .barra {
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1 {
+        color: v.$blanco;
+        display: inline-block;
+        font-weight: v.$bold;
+        text-align: center;
+        @include m.tablet {
+            max-width: 60rem;
+            text-align: left;
+        }
+    }
+}
+
+.navegacion {
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+    }
+
+    a {
+        font-size: 2.2rem;
+        display: block;
+        color: v.$blanco;
+        text-align: center;
+    }
+}
