@@ -8,8 +8,8 @@ import sharp from 'sharp';
 
 const sass = gulpSass(dartSass);
 
-export default series(imagenes, crop, js, css, dev);
-//export default series(js, css, dev);
+//export default series(imagenes, crop, js, css, dev);
+export default series(js, css, dev);
 
 
 export function js( done ) {

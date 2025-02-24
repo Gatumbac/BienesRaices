@@ -28,3 +28,12 @@
     max-width: 120rem;
     margin: 0 auto;
 }
+
+@mixin boton {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: v.$amarillo;
+    color: v.$blanco;
+    text-align: center;
+    display: block;
+}
