@@ -7,9 +7,7 @@
     flex-direction: column;
     gap: 2rem;
     @include m.tablet {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 2rem;
+        @include m.grid(3, 2rem);
     }
 
 }
@@ -72,5 +70,25 @@
 }
 
 .boton {
-    @include m.boton;
+    @include m.boton(v.$amarillo, block);
+    @include m.hoverOscuro(v.$amarillo);
+}
+
+.boton-verMas {
+    @include m.boton(v.$verde, block);
+    padding: 1rem 3rem;
+
+    @include m.tablet {
+        display: inline-block;
+        padding: 1rem 3rem;
+    }
+    @include m.hoverOscuro(v.$verde);
+}
+
+.anuncios-verMas {
+    margin: 3rem 0;
+    @include m.tablet {
+        display: flex;
+        justify-content: end;
+    }
 }
