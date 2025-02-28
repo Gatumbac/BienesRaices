@@ -23,6 +23,12 @@
     }
 }
 
+.informacion-meta {
+    span {
+        color: v.$amarillo;
+    }
+}
+
 .entrada-contenido {
     h4 {
         margin-top: 2rem;
@@ -39,9 +45,7 @@
             margin: 0;
         }
     }
-    span {
-        color: v.$amarillo;
-    }
+
     a {
         color: v.$negro;
     }

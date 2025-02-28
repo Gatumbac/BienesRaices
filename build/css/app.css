@@ -452,8 +452,8 @@ h4 {
 @media (min-width: 768px) {
   .contenido-nosotros {
     display: grid;
+    gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem;
   }
 }
 
@@ -498,6 +498,7 @@ h4 {
   margin: 0;
 }
 .anuncio .contenido-anuncio p {
+  text-align: center;
   margin: 1rem;
 }
 .anuncio .contenido-anuncio .precio {
@@ -506,6 +507,11 @@ h4 {
   font-size: 4rem;
   font-weight: 700;
 }
+@media (min-width: 768px) {
+  .anuncio .contenido-anuncio p {
+    text-align: left;
+  }
+}
 
 .iconos-caracteristicas {
   list-style: none;
@@ -513,6 +519,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+  max-width: 40rem;
 }
 .iconos-caracteristicas .icono {
   display: flex;
@@ -549,6 +556,7 @@ h4 {
 }
 .boton:hover {
   background-color: rgb(199.4849785408, 120.2253218884, 8.0150214592);
+  cursor: pointer;
 }
 
 .boton-verMas {
@@ -559,6 +567,7 @@ h4 {
   text-align: center;
   display: block;
   padding: 1rem 3rem;
+  border: none;
 }
 @media (min-width: 768px) {
   .boton-verMas {
@@ -568,6 +577,7 @@ h4 {
 }
 .boton-verMas:hover {
   background-color: rgb(96.7203389831, 151.5, 0);
+  cursor: pointer;
 }
 
 .anuncios-verMas {
@@ -618,6 +628,7 @@ h4 {
 }
 .contacto .boton-contacto:hover {
   background-color: rgb(199.4849785408, 120.2253218884, 8.0150214592);
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .contacto .boton-contacto {
@@ -647,6 +658,10 @@ h4 {
   margin-bottom: 0;
 }
 
+.informacion-meta span {
+  color: #E08709;
+}
+
 .entrada-contenido h4 {
   margin-top: 2rem;
   line-height: 1.4;
@@ -662,9 +677,6 @@ h4 {
   .entrada-contenido h4 {
     margin: 0;
   }
-}
-.entrada-contenido span {
-  color: #E08709;
 }
 .entrada-contenido a {
   color: #000000;
@@ -697,4 +709,95 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 1rem;
+}
+
+.form p {
+  font-size: 1.4rem;
+  color: #333333;
+  margin: 0;
+}
+.form legend {
+  font-size: 2rem;
+  color: #333333;
+}
+.form label {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+.form input:not([type=submit]),
+.form textarea,
+.form select {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.form textarea {
+  height: 10rem;
+}
+@media (min-width: 768px) {
+  .form textarea {
+    height: 20rem;
+  }
+}
+.form .forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form input[type=radio] {
+  margin: 0;
+  width: auto;
+}
+.form input[type=submit] {
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .conoce-nosotros {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.conoce-nosotros .conoce-contenido span {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.conoce-nosotros .conoce-contenido p {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .conoce-nosotros .conoce-contenido p {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+.pagina-anuncios {
+  margin-bottom: 5rem;
+}
+
+.anuncio-contenido {
+  max-width: 80rem;
+}
+
+.resumen-propiedad .precio {
+  text-align: left;
+  color: #71B100;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.pagina-blog, .entrada-pagina {
+  max-width: 80rem;
+}
+
+.contacto-pagina {
+  max-width: 80rem;
 }/*# sourceMappingURL=app.css.map */
