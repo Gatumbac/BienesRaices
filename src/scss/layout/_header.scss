@@ -28,6 +28,7 @@
         align-items: center;
         gap: 2rem;
         @include m.tablet {
+            align-items: flex-end;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -52,7 +53,15 @@
 }
 
 .navegacion {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear;
+
     @include m.tablet {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
         display: flex;
         gap: 2rem;
     }
@@ -62,5 +71,50 @@
         display: block;
         color: v.$blanco;
         text-align: center;
+    }
+}
+
+/* Menú mobile */
+.mobile-menu {
+    @include m.tablet {
+            display: none;
+    }
+
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+/*Dark Mode*/
+
+.nav-dark-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @include m.tablet {
+        align-items: flex-end;
+    }
+
+    .icon-dark-mode {
+        width: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+
+        @include m.tablet {
+            margin-top: 0;
+        }
+
+        &:hover {
+            cursor: pointer ;
+        }
     }
 }

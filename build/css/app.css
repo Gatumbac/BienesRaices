@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -369,6 +370,36 @@ h4 {
 }
 
 /** Media Queries **/
+.dark-mode {
+  background-color: rgb(25.5, 25.5, 25.5);
+}
+.dark-mode p {
+  color: #FFFFFF;
+}
+.dark-mode a, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+  color: #e1e1e1;
+}
+.dark-mode .anuncio {
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+.dark-mode .anuncio .precio {
+  color: #71B100;
+}
+.dark-mode .iconos-caracteristicas img {
+  filter: invert(100%);
+}
+.dark-mode .form label, .dark-mode .form legend, .dark-mode .form p {
+  color: #e1e1e1;
+}
+.dark-mode .form input:not([type=submit]),
+.dark-mode .form textarea,
+.dark-mode .form select {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #FFFFFF;
+}
+
 .header {
   background-color: #333333;
   padding: 1rem 0 3rem 0;
@@ -398,6 +429,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .header .barra {
+    align-items: flex-end;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -421,8 +453,17 @@ h4 {
   }
 }
 
+.navegacion {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.5s linear;
+}
 @media (min-width: 768px) {
   .navegacion {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
     display: flex;
     gap: 2rem;
   }
@@ -432,6 +473,49 @@ h4 {
   display: block;
   color: #FFFFFF;
   text-align: center;
+}
+
+/* Menú mobile */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu img {
+  width: 5rem;
+}
+
+.mostrar {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+/*Dark Mode*/
+.nav-dark-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .nav-dark-mode {
+    align-items: flex-end;
+  }
+}
+.nav-dark-mode .icon-dark-mode {
+  width: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  filter: invert(100%);
+}
+@media (min-width: 768px) {
+  .nav-dark-mode .icon-dark-mode {
+    margin-top: 0;
+  }
+}
+.nav-dark-mode .icon-dark-mode:hover {
+  cursor: pointer;
 }
 
 .footer {
